@@ -20,10 +20,7 @@ public class QueryExecutionFactorySparqlifySpark
 
 	@Override
 	public QueryExecution createQueryExecution(Query query) {
-		QueryExecution result = new QueryExecutionSparqlifySpark(
-				query, this, sparkSession, sparqlSqlRewriter);
-
-		return result;
+		return new QueryExecutionSparqlifySpark(query, this, sparkSession, sparqlSqlRewriter);
 	}
 
 	@Override

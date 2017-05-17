@@ -41,7 +41,7 @@ object SparqlifyUtils3
 
     val views = partitions.map {
       case (p, rdd) =>
-//
+
         println("Processing: " + p)
 
         val vd = SparqlifyUtils2.createViewDefinition(p);
